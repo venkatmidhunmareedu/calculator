@@ -1,0 +1,134 @@
+/*
+ * Completely resets form items
+ * ----------------------------
+ * Super hard reset that removes all borders
+ * and radiuses of all form items (including
+ * checkboxes and radios)
+*/
+
+button {
+  border: 0;
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  outline: none;
+  appearance: none;
+  text-align: center;
+}
+
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+:root {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+html {
+  font-size: 175%;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+body {
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+}
+
+.calculator {
+  max-width: 550px;
+  max-height: auto;
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
+  margin: 2em auto;
+  box-shadow: 0 0 10px 0 rgba(58, 56, 56, 0.5);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 3.6fr;
+  gap: 4px;
+  grid-template-areas:
+    "calculator-display"
+    ".";
+}
+
+.calculator-display {
+  align-self: center;
+  grid-area: calculator-display;
+  height: 100px;
+  background-color: #FA8BFF;
+  background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+  font-size: 3rem;
+  text-align: right;
+  padding: 0 20px;
+  line-height: 100px;
+  color: #fff;
+}
+
+.calculator-keys {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 10px 10px;
+  grid-template-areas:
+  "all-clear-btn back-space-btn back-space-btn operator-btn-divide"
+  "btnKeyNr7 btnKeyNr8 btnKeyNr9 operator-btn-multiplay"
+  "btnKeyNr4 btnKeyNr5 btnKeyNr6 operator-btn-substract"
+  "btnKeyNr1 btnKeyNr2 btnKeyNr3 operator-btn-plus"
+  "btnKeyNr0 btnKeyNr0 decimal-btn equal-sign-btn";
+}
+
+.operator-btn-divide { grid-area: operator-btn-divide; }
+.operator-btn-multiplay { grid-area: operator-btn-multiplay; }
+.operator-btn-substract { grid-area: operator-btn-substract; }
+.operator-btn-plus { grid-area: operator-btn-plus; }
+.equal-sign-btn { grid-area: equal-sign-btn; }
+.btnKeyNr7 { grid-area: btnKeyNr7; }
+.btnKeyNr8 { grid-area: btnKeyNr8; }
+.btnKeyNr9 { grid-area: btnKeyNr9; }
+.btnKeyNr4 { grid-area: btnKeyNr4; }
+.btnKeyNr5 { grid-area: btnKeyNr5; }
+.btnKeyNr6 { grid-area: btnKeyNr6; }
+/* .btnKeyNr1 { grid-area: btnKeyNr1; } */
+.btnKeyNr2 { grid-area: btnKeyNr2; }
+.btnKeyNr3 { grid-area: btnKeyNr3; }
+.btnKeyNr0 { grid-area: btnKeyNr0; }
+.decimal-btn { grid-area: decimal-btn; }
+.all-clear-btn { grid-area: all-clear-btn; }
+.back-space-btn { grid-area: back-space-btn; }
+
+button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #1e1e1e;
+  color: #e6e6e6;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover,
+button:focus {
+  background: #aea9a9;
+}
+
+.all-clear-btn,
+.back-space-btn {
+  background:#383838 ;
+}
+
+.operator,
+.equal-btn {
+  font-size: 2em;
+  background: #f5980a;
+}
+
+.operator:hover,
+.operator:focus,
+.equal-btn:hover,
+.equal-btn:focus {
+  background:#9f6003;
+}
